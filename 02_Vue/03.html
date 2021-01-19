@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+<body>
+    <div id='app'>
+        <span>{{message}}</span>
+        <hr>
+        <a href="#" v-if="isLogin">欢迎回来</a>
+        <a href="#" v-if="level==='1'">等级为{{level}}</a>
+        <a href="#" v-else>等级为{{level}}</a>
+        <hr>
+        <span v-if='seen'>v-if</span>
+        <br>
+        <span v-show='seen'>v-show</span>
+
+
+
+
+
+
+
+    </div>
+
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello',
+                isLogin: true,
+                level: '8',
+                seen: true,
+            }
+        })
+    </script>
+</body>
+</html>

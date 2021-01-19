@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+<body>
+    <div id='app'>
+        <span>{{message}}</span>
+        <hr>
+        <table>
+            <tr>
+                <td>username</td>
+                <td><input type="text" name="username" v-model="username"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="password" name="password1" v-model="password1"></td>
+            </tr>
+            <tr>
+                <td>Repassword</td>
+                <td><input type="password" name="password2" v-model="password2"></td>
+            </tr>
+
+        </table>
+        <button>register</button>
+    </div>
+
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello',
+                username: '',
+                password1: '',
+                password2: '',
+
+            }
+        })
+        var ccc = (food) => {
+            alert('i like this ' + food)
+        }
+        ccc('bababa')
+    </script>
+</body>
+</html>

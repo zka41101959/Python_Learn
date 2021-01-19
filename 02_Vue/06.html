@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+<body>
+
+    <div id="app">
+        <span>{{message}}</span>
+
+        <input type="text" name="todoitem" v-model="newitem"><button @click="add">Add</button>
+        <hr>
+        <ul>
+            <li v-for="item in items">{{item}}</li>
+
+
+        </ul>
+
+
+    </div>
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            //trans html
+            el: '#app',
+            //data
+            data: {
+                message: 'hello',
+                items: ['html', 'css', 'django'],
+            },
+            methods: {
+                add: function () {
+                    this.items.push(this.newitem)
+                    this.newitem = ''
+                },
+            }
+        })
+    </script>
+</body>
+</html>
